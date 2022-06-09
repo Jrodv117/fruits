@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Jrodv117/fruits/issues"
   },
-  "homepage": "https://github.com/Jrodv117/fruits#readme"
+  "homepage": "https://github.com/Jrodv117/fruits#readme",
+  "dependencies": {
+    "mongo": "^0.1.0",
+    "mongoose": "^6.3.6"
+  }
 }
