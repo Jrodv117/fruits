@@ -17,8 +17,25 @@ const fruit = new Fruit({
 	rating: 7,
 	review: 'solid fruit',
 });
+const banana = new Fruit({
+	name: 'banana',
+	rating: 7,
+	review: 'solid fruit',
+});
 
-// fruit.save();
+const kiwi = new Fruit({
+	name: 'kiwi',
+	rating: 9,
+	review: 'solid fruit',
+});
+
+// Fruit.insertMany([banana, kiwi], (err) => {
+// 	if (err) {
+// 		console.log(err);
+// 	} else {
+// 		console.log('success');
+// 	}
+// });
 
 const personSchema = new mongoose.Schema({
 	name: String,
@@ -33,3 +50,17 @@ const person = new Person({
 });
 
 // person.save();
+
+Fruit.find((err, fruits) => {
+	//finds all of our fruit from fruits array
+	if (err) {
+		console.log(err);
+	} else {
+		console.log(fruits);
+	}
+
+	//loops through our fruits array and forEach fruit prints out their name
+	fruits.forEach((fruit) => {
+		console.log(fruit.name);
+	});
+});
